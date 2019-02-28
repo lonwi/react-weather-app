@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { geolocated } from 'react-geolocated';
 import './WeatherApp.css';
 
 class WeatherApp extends Component {
@@ -8,6 +9,7 @@ class WeatherApp extends Component {
     render() {
         return (
             <div className="WeatherApp">
+                { this.props.isGeolocationAvailable ? `yes` : `no`}
                 <header className="WeatherApp-header">
                     <div className="container">
                         <div className="row">
@@ -42,4 +44,9 @@ class WeatherApp extends Component {
         );
     }
 }
-export default WeatherApp;
+export default geolocated({
+    positionOptions: {
+        enableHighAccuracy: false,
+    },
+    userDecisionTimeout: 5000,
+})(WeatherApp);
