@@ -1,0 +1,23 @@
+.WeatherApp {
+  background-color: #0086A4;
+  color: #fff;
+}
+.WeatherApp-header {
+    padding: 3rem 0;
+}
+.WeatherApp-header  .WeatherApp-logo {
+    font-weight: 700;
+}
+.WeatherApp-header  .WeatherApp-logo i {
+    font-size: 3rem;
+}
+.WeatherApp-header  .WeatherApp-logo h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+.WeatherApp-footer {
+
+}
+.WeatherApp-error {
+    background-color: #B30051;
+}
