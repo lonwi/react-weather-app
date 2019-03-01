@@ -1,36 +1,38 @@
-.WeatherBlock {
+.WeatherBlockSmall {
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(255, 255, 255, 0.2);
     height: 100%;
 }
-.WeatherBlock-condition {
+.WeatherBlockSmall-condition {
     display: inline-block;
     font-size: 2rem;
     text-align: right;
     padding: 0.5rem 0.2rem;
 }
-.WeatherBlock-temp {
+.WeatherBlockSmall-temp {
     display: inline-block;
     font-size: 2rem;
     font-weight: 700;
     text-align: left;
     padding: 0.5rem 0.2rem;
 }
-.WeatherBlock-description {
+.WeatherBlockSmall-description {
     font-size: 0.9rem;
 }
-.WeatherBlock-temp .deg {
+.WeatherBlockSmall-temp .deg {
     font-weight: 400;
 }
-.WeatherBlock-wind {
+.WeatherBlockSmall-wind {
     font-size: 0.9rem;
 }
-.WeatherBlock-wind i {
+.WeatherBlockSmall-wind i {
     font-size: 1rem;
 }
-.WeatherBlock-date {
+.WeatherBlockSmall-date {
     font-size: 0.9rem;
     text-transform: capitalize;
 }
-.WeatherBlock-date--day {
+.WeatherBlockSmall-date--day {
     font-weight: bold;
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Moment from 'react-moment';
 import 'moment/locale/pl';
 import './WeatherBlock.css';
+import { countries } from 'country-data';
 import moment from 'moment';
 
 class WeatherBlock extends Component {
@@ -17,7 +18,7 @@ class WeatherBlock extends Component {
         let condition;
         switch (weather) {
             case 'Thunderstorm':
-            condition = time === 'day' ? 'day-thunderstorm' : 'night-thunderstorm';
+                condition = time === 'day' ? 'day-thunderstorm' : 'night-thunderstorm';
                 break;
             case 'Drizzle':
                 condition = time === 'day' ? 'day-rain-mix' : 'night-rain-mix';
@@ -48,45 +49,11 @@ class WeatherBlock extends Component {
     render() {
         //console.log(this.props.item.main.temp);
         return (
-            <div className="col-6 col-sm-4 col-md-3 col-lg-3 my-3">
+            <div className="col-12 my-3">
                 <div className="WeatherBlock animated fadeIn slow p-3">
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="WeatherBlock-date">
-                                <div className="WeatherBlock-date--day">
-                                    <Moment locale="pl" format="LT dddd">{this.props.item.dt_txt}</Moment>
-                                </div>
-                                <div className="WeatherBlock-date--full">
-                                    <Moment locale="pl" format="LL">{this.props.item.dt_txt}</Moment>
-                                </div>
-                            </div>
-                        </div>
+                    <div className="">
+                        <h2>{this.props.data.name}, {countries[this.props.data.sys.country].name}</h2>
                     </div>
-                    <div className="row no-gutters">
-                        <div className="col">
-                            <div className="WeatherBlock-condition">
-                                {this.renderConditionIcon()}
-                            </div>
-                            <div className="WeatherBlock-temp">
-                                {this.calculate(this.props.item.main.temp)}&deg;<span className="deg">C</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="WeatherBlock-description mb-1">
-                            {this.props.item.weather[0].description}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="WeatherBlock-wind">
-                                <i className="wi wi-wind-direction" style={ {transform: `rotate(${this.props.item.wind.deg}deg)`}}></i> Wiatr: {this.props.item.wind.speed} m/s
-                            </div>
-                        </div>
-                    </div>
-                    
                 </div>
             </div>
         );
