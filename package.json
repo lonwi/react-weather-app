@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "moment": "^2.24.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-geolocated": "^2.4.1",
+    "react-moment": "^0.8.4",
     "react-scripts": "2.1.5"
   },
   "scripts": {

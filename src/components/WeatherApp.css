@@ -21,3 +21,40 @@
 .WeatherApp-error {
     background-color: #B30051;
 }
+.WeatherApp-search {
+    position: relative;
+}
+
+.WeatherApp-search .input-search {
+    background: #fff;
+    border: none;
+    outline: none;
+    padding: 0.5rem 2rem;
+    width: 100%;
+}
+.WeatherApp-search .button-search {
+    background: #fff;
+    border: none;
+    color: #0086A4;
+    outline: none;
+    padding: 0 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.loading {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loading i {
+    animation: spin 2s infinite linear;
+    font-size: 2rem;
+}
