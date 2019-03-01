@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { geolocated } from 'react-geolocated';
+import moment from 'moment';
 import WeatherBlock from './WeatherBlock';
 import WeatherBlockSmall from './WeatherBlockSmall';
 import './WeatherApp.css';
@@ -107,12 +108,14 @@ class WeatherApp extends Component {
     }
     renderWeatherBlock() {
         if (this.state.loaded && !this.state.error) {
-            return <WeatherBlock data={this.state.dataWeatherCurrent} />
+            return <WeatherBlock item={this.state.dataWeatherCurrent} />
         }
     }
     renderWeatherBlockSmalls() {
         if (this.state.loaded && !this.state.error) {
-            return this.state.dataWeatherForecast.list.map((item, index) => <WeatherBlockSmall key={index} item={item} />);
+            return (
+                this.state.dataWeatherForecast.list.map((item, index) => <WeatherBlockSmall key={index} item={item} />)
+            );
         }
     }
     render() {

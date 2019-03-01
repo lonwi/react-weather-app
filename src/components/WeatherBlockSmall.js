@@ -11,8 +11,8 @@ class WeatherBlockSmall extends Component {
     renderConditionIcon() {
         const weather = this.props.item.weather[0].main;
         // const weatherId = this.props.item.weather[0].id;
-        const hour = moment(this.props.item.dt_txt).format('h');
-        const time = (hour < 7 || hour > 19) ? 'night' : 'day';
+        const hour = moment(this.props.item.dt_txt).format('H');
+        const time = (hour < 6 || hour > 19) ? 'night' : 'day';
         // const time = 'day';
         let condition;
         switch (weather) {
