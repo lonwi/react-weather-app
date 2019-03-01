@@ -30,8 +30,6 @@ class WeatherApp extends Component {
             const api_key = '5e63f64940665bdc51aa275592b924a4';
             const url = `https://api.openweathermap.org/data/2.5/weather?lat=${this.props.coords.latitude}&lon=${this.props.coords.longitude}&units=metric&lang=pl&appid=${api_key}`;
 
-            //this.setState({ loading: true });
-
             fetch(url)
                 .then((response) => response.json())
                 .then((data) => {
@@ -39,8 +37,12 @@ class WeatherApp extends Component {
                         this.setState({ value: data.name });
                         this.getLocationData();
                     }
-                })
-               .finally(() => this.setState({ loading: false }));
+                });
+            return (
+                <div className="loading col-12 align-item-center">
+                    <i className={`fas fa-sync animated slower ${this.state.loading ? 'fadeIn' : 'fadeOut'}`}></i>
+                </div>
+            );
         }
     }
     getLocationData() {
