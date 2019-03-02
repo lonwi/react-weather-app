@@ -67,48 +67,50 @@ class WeatherBlock extends Component {
                                 <h2>{this.props.item.name}, {countries[this.props.item.sys.country].name}</h2>
                             </div>
                         </div>
+
                         <div className="col-6 col-md-4">
                             <div className="WeatherBlock-temp_max my-2">
                                 <div className="row justify-content-start">
                                     <div className="col-auto">
                                         <i className="wi wi-fw wi-direction-up"></i> Maksymalna:
-                                    </div>
+                                        </div>
                                     <div className="col-auto">
-                                    {this.calculate(this.props.item.main.temp_max)}&deg;<span className="deg">C</span>
+                                        {this.calculate(this.props.item.main.temp_max)}&deg;<span className="deg">C</span>
                                     </div>
                                 </div>
                             </div>
                             <div className="WeatherBlock-temp_min my-2">
                                 <div className="row justify-content-start">
                                     <div className="col-auto">
-                                    <i className="wi wi-fw wi-direction-down"></i> Minimalna:
-                                    </div>
+                                        <i className="wi wi-fw wi-direction-down"></i> Minimalna:
+                                        </div>
                                     <div className="col-auto">
                                         {this.calculate(this.props.item.main.temp_min)}&deg;<span className="deg">C</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-6 col-md-4">
-                            <div className="WeatherBlock-humidity my-2">
-                                <div className="row justify-content-start">
-                                    <div className="col-auto">
-                                        <i className="wi wi-fw wi-humidity"></i> Wilgotność:
+                    </div>
+
+                    <div className="col-6 col-md-4">
+                        <div className="WeatherBlock-humidity my-2">
+                            <div className="row justify-content-start">
+                                <div className="col-auto">
+                                    <i className="wi wi-fw wi-humidity"></i> Wilgotność:
                                     </div>
-                                    <div className="col-auto">
-                                        {this.props.item.main.humidity}%
+                                <div className="col-auto">
+                                    {this.props.item.main.humidity}%
                                     </div>
-                                </div>
                             </div>
-                            <div className="WeatherBlock-pressure my-2">
-                                <div className="row justify-content-start">
-                                    <div className="col-auto">
+                        </div>
+                        <div className="WeatherBlock-pressure my-2">
+                            <div className="row justify-content-start">
+                                <div className="col-auto">
                                     <i className="wi wi-fw wi-thermometer"></i> Ciśnienie:
                                     </div>
-                                    <div className="col-auto">
-                                        {this.props.item.main.pressure}hPa
+                                <div className="col-auto">
+                                    {this.props.item.main.pressure}hPa
                                     </div>
-                                </div>
                             </div>
                         </div>
                     </div>

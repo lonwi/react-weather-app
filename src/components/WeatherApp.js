@@ -26,7 +26,7 @@ class WeatherApp extends Component {
 
     }
     getGeolocationData() {
-        if (this.props.isGeolocationAvailable && this.props.isGeolocationEnabled && this.props.coords && !this.state.value) {
+        if (this.props.isGeolocationAvailable && this.props.isGeolocationEnabled && this.props.coords && !this.state.value & !this.state.valueSearched) {
 
             const api_key = '5e63f64940665bdc51aa275592b924a4';
             const url = `https://api.openweathermap.org/data/2.5/weather?lat=${this.props.coords.latitude}&lon=${this.props.coords.longitude}&units=metric&lang=pl&appid=${api_key}`;
@@ -81,7 +81,7 @@ class WeatherApp extends Component {
                 .finally(() => resolve());
         });
     }
-    handleChange(event) {
+    handleChange = (event) => {
         this.setState({ value: event.target.value });
     }
     handleSubmit = (event) => {
