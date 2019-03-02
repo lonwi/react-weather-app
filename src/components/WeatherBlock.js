@@ -90,27 +90,28 @@ class WeatherBlock extends Component {
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div className="col-6 col-md-4">
-                        <div className="WeatherBlock-humidity my-2">
-                            <div className="row justify-content-start">
-                                <div className="col-auto">
-                                    <i className="wi wi-fw wi-humidity"></i> Wilgotność:
+
+                        <div className="col-6 col-md-4">
+                            <div className="WeatherBlock-humidity my-2">
+                                <div className="row justify-content-start">
+                                    <div className="col-auto">
+                                        <i className="wi wi-fw wi-humidity"></i> Wilgotność:
                                     </div>
-                                <div className="col-auto">
-                                    {this.props.item.main.humidity}%
+                                    <div className="col-auto">
+                                        {this.props.item.main.humidity}%
                                     </div>
+                                </div>
                             </div>
-                        </div>
-                        <div className="WeatherBlock-pressure my-2">
-                            <div className="row justify-content-start">
-                                <div className="col-auto">
-                                    <i className="wi wi-fw wi-thermometer"></i> Ciśnienie:
+                            <div className="WeatherBlock-pressure my-2">
+                                <div className="row justify-content-start">
+                                    <div className="col-auto">
+                                        <i className="wi wi-fw wi-thermometer"></i> Ciśnienie:
                                     </div>
-                                <div className="col-auto">
-                                    {this.props.item.main.pressure}hPa
+                                    <div className="col-auto">
+                                        {this.props.item.main.pressure}hPa
                                     </div>
+                                </div>
                             </div>
                         </div>
                     </div>
