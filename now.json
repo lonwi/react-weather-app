@@ -1,6 +1,7 @@
 {
     "version": 2,
     "name": "react-weather-app",
+    "alias": "react-weather-app.lonwi.info",
     "builds": [
         { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "build" } }
     ],
